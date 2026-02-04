@@ -4,9 +4,11 @@
 
 const express = require("express");
 const noteModel = require("./models/note.model");
+const cors = require("cors");
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 /**
  * POST /api/notes

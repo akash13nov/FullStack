@@ -1,32 +1,23 @@
 import { useState } from "react";
+import axios from "../node_modules/axios/lib/axios";
 
 function App() {
-  const [notes, setNotes] = useState([
-    {
-      title: "test title 1",
-      description: "test description 1",
-    },
-    {
-      title: "test title 2",
-      description: "test description 2",
-    },
-    {
-      title: "test title 3",
-      description: "test description 3",
-    },
-    {
-      title: "test title 4",
-      description: "test description 4",
-    },
-  ]);
+  const [notes, setNotes] = useState([]);
+  axios.get("http://localhost:3000/api/notes").then((res) => {
+    // setNotes(res.data.notes);
+  });
   return (
     <>
       <div className="notes">
-        <div className="note">
-          <h3>title</h3>
-          <p>description</p>
-          <p>comment</p>
-        </div>
+        {notes.map((note) => {
+          return (
+            <div className="note">
+              <h3>{note.title}</h3>
+              <p>{note.description}</p>
+              <p>{note.comment}</p>
+            </div>
+          );
+        })}
       </div>
     </>
   );
