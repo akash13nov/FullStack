@@ -64,9 +64,17 @@ html {
   font-size: 14px;
 }
 
-.update-btn {
-  padding: 4px 20px;
+.create-btn {
+  padding: 10px;
   background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.update-btn {
+  padding: 10px 16px;
+  background-color: #2e7221;
   color: #fff;
   border: none;
   border-radius: 6px;
@@ -74,8 +82,8 @@ html {
 }
 
 .delete-btn {
-  flex: 1;
-  padding: 10px;
+  margin-left: 2rem;
+  padding: 10px 16px;
   background-color: #e53935;
   color: #fff;
   border: none;

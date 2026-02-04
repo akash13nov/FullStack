@@ -39,7 +39,7 @@ function App() {
         <input name="title" type="text" placeholder="Title" />
         <input name="description" type="text" placeholder="Description" />
         <input name="comment" type="text" placeholder="Comment" />
-        <button className="update-btn">Create note</button>
+        <button className="create-btn">Create note</button>
       </form>
 
       <div className="notes">
@@ -49,6 +49,7 @@ function App() {
               <h3>{note.title}</h3>
               <p>{note.description}</p>
               <p>{note.comment}</p>
+              <button className="update-btn">Update</button>
               <button
                 className="delete-btn"
                 onClick={() => {
