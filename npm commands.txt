@@ -1,0 +1,6 @@
+1. Add a gitignore file :-           touch .gitignore
+2. Create a server :-               npm init -y
+3. Create a server :-               npm i express
+4. Server is started :-             npx nodemon server.js
+5. Connect database to server :-    npm i mongoose
+6. install .env package :-           npm i dotenv
