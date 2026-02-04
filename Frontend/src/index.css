@@ -63,30 +63,23 @@ html {
   border-radius: 6px;
   font-size: 14px;
 }
-
-.create-btn {
-  padding: 10px;
-  background-color: #000;
+.btn {
+  padding: 10px 16px;
   color: #fff;
   border: none;
   border-radius: 6px;
   cursor: pointer;
 }
+.create-btn {
+  background-color: #000;
+}
 .update-btn {
   padding: 10px 16px;
   background-color: #2e7221;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
 }
 
 .delete-btn {
   margin-left: 2rem;
   padding: 10px 16px;
   background-color: #e53935;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
 }
