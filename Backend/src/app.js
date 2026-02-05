@@ -5,10 +5,16 @@
 const express = require("express");
 const noteModel = require("./models/note.model");
 const cors = require("cors");
+const path = require("path");
 
 const app = express();
-app.use(express.json());
 app.use(cors());
+app.use(express.json());
+/**
+ * http://localhost:3000/assets/index-CuruXpPN.js
+ * http://localhost:3000/assets/index-CTP9n18l.css
+ */
+app.use(express.static("./public"));
 
 /**
  * POST /api/notes
@@ -69,4 +75,9 @@ app.patch("/api/notes/:id", async (req, res) => {
   });
 });
 
+console.log(__dirname);
+
+app.use("*name", (req, res) => {
+  res.sendFile(path.join(__dirname, "..", "/public/index.html"));
+});
 module.exports = app;

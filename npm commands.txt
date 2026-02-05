@@ -12,6 +12,6 @@ BackEnd:
 
 
 FrontEnd:
-1. create react project :-      npm create vite@latest .
+1. create react project :-          npm create vite@latest .
 2. install axios (for API Call) :-  npm i axios
-
+3. build frontend project :-        npm run build

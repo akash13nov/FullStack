@@ -24,6 +24,9 @@ body,
 html {
   background-color: #111;
 }
+.main {
+  margin: 20px;
+}
 .notes {
   display: flex;
   gap: 16px;
@@ -47,6 +50,7 @@ html {
   margin-bottom: 1.5rem;
 }
 .note-form {
+  width: fit-content;
   display: flex;
   gap: 15px;
   padding: 20px;
