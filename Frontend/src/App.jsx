@@ -6,7 +6,7 @@ function App() {
   const [editingNote, setEditingNote] = useState(null);
 
   function fetchNotes() {
-    axios.get("http://localhost:3000/api/notes").then((res) => {
+    axios.get("https://fullstack-6-hf3b.onrender.com/api/notes").then((res) => {
       setNotes(res.data.notes);
       setEditingNote(null);
     });
@@ -21,7 +21,7 @@ function App() {
     if (editingNote && editingNote._id) {
       axios
         .patch(
-          "http://localhost:3000/api/notes/" + editingNote._id,
+          "https://fullstack-6-hf3b.onrender.com/api/notes/" + editingNote._id,
           editingNote,
         )
         .then(() => {
@@ -29,18 +29,22 @@ function App() {
           setEditingNote(null);
         });
     } else {
-      axios.post("http://localhost:3000/api/notes", editingNote).then(() => {
-        fetchNotes();
-        setEditingNote(null);
-      });
+      axios
+        .post("https://fullstack-6-hf3b.onrender.com/api/notes", editingNote)
+        .then(() => {
+          fetchNotes();
+          setEditingNote(null);
+        });
     }
   }
 
   function handleDeleteNote(noteId) {
-    axios.delete("http://localhost:3000/api/notes/" + noteId).then((res) => {
-      console.log(res.data);
-      fetchNotes();
-    });
+    axios
+      .delete("https://fullstack-6-hf3b.onrender.com/api/notes/" + noteId)
+      .then((res) => {
+        console.log(res.data);
+        fetchNotes();
+      });
   }
 
   function handleChange(e) {
